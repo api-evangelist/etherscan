@@ -1,31 +1,42 @@
 aid: etherscan
-name: Etherscan
-description: >-
-  Etherscan  is the leading blockchain explorer, search, API and analytics
-  platform for Ethereum, a decentralized smart contracts platform. 
-type: Index
-position: Consumer
-access: 3rd-Party
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-tags:
-  - API
-created: '2025-02-17'
-modified: '2025-02-17'
 url: >-
   https://raw.githubusercontent.com/api-evangelist/etherscan/refs/heads/main/apis.yml
-specificationVersion: '0.19'
 apis:
   - aid: etherscan:etherscan
     name: Etherscan
+    tags:
+      - API
+    humanURL: ' https://docs.etherscan.io/'
+    properties:
+      - url: ' https://docs.etherscan.io/'
+        type: Documentation
     description: >-
       Etherscan  is the leading blockchain explorer, search, API and analytics
       platform for Ethereum, a decentralized smart contracts platform. 
-    humanURL: ' https://docs.etherscan.io/'
-    tags:
-      - API
-    properties:
-      - type: Documentation
-        url: ' https://docs.etherscan.io/'
+name: Etherscan
+tags:
+  - Blockchain
+  - Ethereum
+  - Cryptocurrency
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2025-02-17'
+modified: '2025-03-02'
+position: Consumer
+description: >-
+  Etherscan is a popular blockchain explorer platform designed specifically for
+  Ethereum. It allows users to easily access and explore blockchain data, such
+  as transaction histories, smart contracts, token balances, and network
+  activity. Etherscan provides users with valuable insights into the Ethereum
+  network, including information on decentralized applications (DApps) and token
+  transfers. Additionally, Etherscan offers a range of tools and services for
+  developers, allowing them to analyze and monitor their smart contracts, as
+  well as track the progress of their transactions in real-time. Overall,
+  Etherscan serves as a comprehensive resource for Ethereum users, developers,
+  and enthusiasts looking to better understand and navigate the Ethereum
+  blockchain.
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
+specificationVersion: '0.19'
