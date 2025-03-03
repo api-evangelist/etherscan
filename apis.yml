@@ -13,8 +13,14 @@ apis:
       - url: ' https://docs.etherscan.io/'
         type: Documentation
     description: >-
-      Etherscan  is the leading blockchain explorer, search, API and analytics
-      platform for Ethereum, a decentralized smart contracts platform. 
+      Etherscan API is a powerful tool that allows developers to access
+      blockchain data from the Ethereum network. This API provides real-time
+      information about transactions, addresses, blocks, and contracts on the
+      Ethereum blockchain. Developers can use the Etherscan API to build
+      applications that require access to blockchain data, such as wallets,
+      exchanges, and data analysis tools. By using the Etherscan API, developers
+      can easily retrieve and manipulate blockchain data, enabling them to
+      create innovative and decentralized applications.
 name: Etherscan
 tags:
   - Blockchain
