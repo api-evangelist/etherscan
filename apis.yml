@@ -3,9 +3,11 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/etherscan/refs/heads/main/apis.yml
 apis:
   - aid: etherscan:etherscan
-    name: Etherscan
+    name: Etherscan API
     tags:
-      - API
+      - Blockchain
+      - Ethereum
+      - Cryptocurrency
     humanURL: ' https://docs.etherscan.io/'
     properties:
       - url: ' https://docs.etherscan.io/'
