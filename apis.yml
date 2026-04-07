@@ -6,8 +6,8 @@ apis:
     name: Etherscan API
     tags:
       - Blockchain
-      - Ethereum
       - Cryptocurrency
+      - Ethereum
     humanURL: ' https://docs.etherscan.io/'
     properties:
       - url: ' https://docs.etherscan.io/'
@@ -21,8 +21,8 @@ apis:
 name: Etherscan
 tags:
   - Blockchain
-  - Ethereum
   - Cryptocurrency
+  - Ethereum
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
