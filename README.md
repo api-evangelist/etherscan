@@ -1,42 +1,56 @@
 # Etherscan (etherscan)
-Etherscan is a popular blockchain explorer platform designed specifically for Ethereum. It allows users to easily access and explore blockchain data, such as transaction histories, smart contracts, token balances, and network activity. Etherscan provides users with valuable insights into the Ethereum network, including information on decentralized applications (DApps) and token transfers. Additionally, Etherscan offers a range of tools and services for developers, allowing them to analyze and monitor their smart contracts, as well as track the progress of their transactions in real-time. Overall, Etherscan serves as a comprehensive resource for Ethereum users, developers, and enthusiasts looking to better understand and navigate the Ethereum blockchain.
+
+Etherscan is the leading blockchain explorer, search, API, and analytics platform for Ethereum and other EVM-compatible chains. It allows users to easily access and explore blockchain data, including transaction histories, smart contracts, token balances, and network activity. Etherscan's unified V2 API covers 60+ chains under a single account and API key, with a free tier offering 100,000 daily calls and paid tiers up to enterprise.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/etherscan/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Index 
-- **Position:** Consumer 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
 
-## Tags:
+## Tags
 
- - Blockchain, Ethereum, Cryptocurrency
+- Blockchain, Cryptocurrency, Ethereum, EVM, Web3
 
 ## Timestamps
 
-- **Created:** 2025-02-17 
-- **Modified:** 2025-03-02 
+- **Created:** 2025-02-17
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Etherscan API
-Etherscan API is a powerful tool that allows developers to access blockchain data from the Ethereum network. This API provides real-time information about transactions, addresses, blocks, and contracts on the Ethereum blockchain. Developers can use the Etherscan API to build applications that require access to blockchain data, such as wallets, exchanges, and data analysis tools. By using the Etherscan API, developers can easily retrieve and manipulate blockchain data, enabling them to create innovative and decentralized applications.
 
-**Human URL:** [ https://docs.etherscan.io/]( https://docs.etherscan.io/)
+Etherscan API V2 provides unified access to blockchain data across Ethereum and 60+ EVM-compatible chains, including transactions, addresses, blocks, smart contracts, token transfers, and gas tracking. A single API key works across all supported networks.
 
+**Human URL:** [https://docs.etherscan.io/](https://docs.etherscan.io/)
 
-#### Tags:
+**Base URL:** `https://api.etherscan.io/v2/api`
 
- - Blockchain, Ethereum, Cryptocurrency
+#### Tags
+
+- Blockchain, Cryptocurrency, Ethereum, EVM
 
 #### Properties
 
-- [Documentation]( https://docs.etherscan.io/)
+- [Documentation](https://docs.etherscan.io/)
+- [Pricing](https://etherscan.io/apis)
+- [SignUp](https://etherscan.io/myapikey)
+- [Terms of Service](https://etherscan.io/apiterms)
+- [OpenAPI](openapi/etherscan-openapi.yml)
+
+## Common Properties
+
+- [Portal](https://etherscan.io/)
+- [Documentation](https://docs.etherscan.io/)
+- [Pricing](https://etherscan.io/apis)
+- [Terms of Service](https://etherscan.io/apiterms)
+- [SignUp](https://etherscan.io/myapikey)
 
 ## Maintainers
 
 **FN:** Kin Lane
 
-**Email:** info@apievangelist.com
-
+**Email:** kin@apievangelist.com
