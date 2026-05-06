@@ -1,0 +1,162 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Etherscan API
+  description: Etherscan API V2 provides unified access to blockchain data across Ethereum and 60+ EVM-compatible chains,
+    including transactions, addresses, blocks, smart contracts, token transfers, and gas tracking. A single API key works
+    across all supported networks.
+  tags:
+  - Etherscan
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: etherscan
+    baseUri: https://api.etherscan.io/v2/api
+    description: Etherscan API HTTP API.
+    authentication:
+      type: apikey
+      in: query
+      name: apikey
+      value: '{{ETHERSCAN_TOKEN}}'
+    resources:
+    - name: resource
+      path: /
+      operations:
+      - name: callapi
+        method: GET
+        description: Unified API endpoint
+        inputParameters:
+        - name: chainid
+          in: query
+          type: integer
+          required: true
+          description: Numeric chain ID (e.g. 1 for Ethereum mainnet, 56 for BNB Smart Chain, 8453 for Base).
+        - name: module
+          in: query
+          type: string
+          required: true
+          description: API module (account, contract, transaction, block, stats, gastracker, token).
+        - name: action
+          in: query
+          type: string
+          required: true
+          description: Action within the module (e.g. balance, txlist, tokenbalance, getabi).
+        - name: address
+          in: query
+          type: string
+          description: Ethereum address for account or token operations.
+        - name: contractaddress
+          in: query
+          type: string
+          description: Smart contract address for token or contract operations.
+        - name: startblock
+          in: query
+          type: integer
+        - name: endblock
+          in: query
+          type: integer
+        - name: page
+          in: query
+          type: integer
+        - name: offset
+          in: query
+          type: integer
+        - name: sort
+          in: query
+          type: string
+        - name: tag
+          in: query
+          type: string
+          description: Block tag (latest, earliest, pending) or block number.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: etherscan-rest
+    description: REST adapter for Etherscan API.
+    resources:
+    - path: /
+      name: callapi
+      operations:
+      - method: GET
+        name: callapi
+        description: Unified API endpoint
+        call: etherscan.callapi
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: etherscan-mcp
+    transport: http
+    description: MCP adapter for Etherscan API for AI agent use.
+    tools:
+    - name: callapi
+      description: Unified API endpoint
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: etherscan.callapi
+      with:
+        chainid: tools.chainid
+        module: tools.module
+        action: tools.action
+        address: tools.address
+        contractaddress: tools.contractaddress
+        startblock: tools.startblock
+        endblock: tools.endblock
+        page: tools.page
+        offset: tools.offset
+        sort: tools.sort
+        tag: tools.tag
+      inputParameters:
+      - name: chainid
+        type: integer
+        description: Numeric chain ID (e.g. 1 for Ethereum mainnet, 56 for BNB Smart Chain, 8453 for Base).
+        required: true
+      - name: module
+        type: string
+        description: API module (account, contract, transaction, block, stats, gastracker, token).
+        required: true
+      - name: action
+        type: string
+        description: Action within the module (e.g. balance, txlist, tokenbalance, getabi).
+        required: true
+      - name: address
+        type: string
+        description: Ethereum address for account or token operations.
+      - name: contractaddress
+        type: string
+        description: Smart contract address for token or contract operations.
+      - name: startblock
+        type: integer
+        description: startblock
+      - name: endblock
+        type: integer
+        description: endblock
+      - name: page
+        type: integer
+        description: page
+      - name: offset
+        type: integer
+        description: offset
+      - name: sort
+        type: string
+        description: sort
+      - name: tag
+        type: string
+        description: Block tag (latest, earliest, pending) or block number.
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    ETHERSCAN_TOKEN: ETHERSCAN_TOKEN
