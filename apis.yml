@@ -44,7 +44,7 @@ apis:
       - url: https://etherscan.io/myapikey
         type: SignUp
       - url: https://etherscan.io/apiterms
-        type: Terms of Service
+        type: TermsOfService
       - url: openapi/etherscan-openapi.yml
         type: OpenAPI
 common:
@@ -55,7 +55,7 @@ common:
   - url: https://etherscan.io/apis
     type: Pricing
   - url: https://etherscan.io/apiterms
-    type: Terms of Service
+    type: TermsOfService
   - url: https://etherscan.io/myapikey
     type: SignUp
 maintainers:
