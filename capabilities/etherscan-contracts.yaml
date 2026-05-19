@@ -1,48 +1,51 @@
 naftiko: 1.0.0-alpha2
 info:
-  label: Etherscan API
-  description: Etherscan API V2 provides unified access to blockchain data across Ethereum and 60+ EVM-compatible chains,
-    including transactions, addresses, blocks, smart contracts, token transfers, and gas tracking. A single API key works
-    across all supported networks.
+  label: Etherscan API — Contracts
+  description: 'Etherscan API — Contracts. 1 operations. Lead operation: Unified API endpoint. Self-contained Naftiko capability
+    covering one Etherscan business surface.'
   tags:
   - Etherscan
-  - API
-  created: '2026-05-06'
-  modified: '2026-05-06'
+  - Contracts
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ETHERSCAN_API_KEY: ETHERSCAN_API_KEY
 capability:
   consumes:
   - type: http
-    namespace: etherscan
+    namespace: etherscan-contracts
     baseUri: https://api.etherscan.io/v2/api
-    description: Etherscan API HTTP API.
-    authentication:
-      type: apikey
-      in: query
-      name: apikey
-      value: '{{ETHERSCAN_TOKEN}}'
+    description: Etherscan API — Contracts business capability. Self-contained, no shared references.
     resources:
-    - name: resource
+    - name: root
       path: /
       operations:
       - name: callapi
         method: GET
         description: Unified API endpoint
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
         inputParameters:
         - name: chainid
           in: query
           type: integer
-          required: true
           description: Numeric chain ID (e.g. 1 for Ethereum mainnet, 56 for BNB Smart Chain, 8453 for Base).
+          required: true
         - name: module
           in: query
           type: string
-          required: true
           description: API module (account, contract, transaction, block, stats, gastracker, token).
+          required: true
         - name: action
           in: query
           type: string
-          required: true
           description: Action within the module (e.g. balance, txlist, tokenbalance, getabi).
+          required: true
         - name: address
           in: query
           type: string
@@ -70,40 +73,55 @@ capability:
           in: query
           type: string
           description: Block tag (latest, earliest, pending) or block number.
-        outputRawFormat: json
-        outputParameters:
-        - name: result
-          type: object
-          value: $.
+    authentication:
+      type: apikey
+      key: apikey
+      value: '{{env.ETHERSCAN_API_KEY}}'
+      placement: query
   exposes:
   - type: rest
+    namespace: etherscan-contracts-rest
     port: 8080
-    namespace: etherscan-rest
-    description: REST adapter for Etherscan API.
+    description: REST adapter for Etherscan API — Contracts. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
     resources:
-    - path: /
-      name: callapi
+    - path: /v1
+      name: root
+      description: REST surface for root.
       operations:
       - method: GET
         name: callapi
         description: Unified API endpoint
-        call: etherscan.callapi
+        call: etherscan-contracts.callapi
+        with:
+          chainid: rest.chainid
+          module: rest.module
+          action: rest.action
+          address: rest.address
+          contractaddress: rest.contractaddress
+          startblock: rest.startblock
+          endblock: rest.endblock
+          page: rest.page
+          offset: rest.offset
+          sort: rest.sort
+          tag: rest.tag
         outputParameters:
         - type: object
           mapping: $.
   - type: mcp
+    namespace: etherscan-contracts-mcp
     port: 9090
-    namespace: etherscan-mcp
     transport: http
-    description: MCP adapter for Etherscan API for AI agent use.
+    description: MCP adapter for Etherscan API — Contracts. One tool per consumed operation, routed inline through this capability's
+      consumes block.
     tools:
-    - name: callapi
+    - name: unified-api-endpoint
       description: Unified API endpoint
       hints:
         readOnly: true
         destructive: false
         idempotent: true
-      call: etherscan.callapi
+      call: etherscan-contracts.callapi
       with:
         chainid: tools.chainid
         module: tools.module
@@ -116,47 +134,6 @@ capability:
         offset: tools.offset
         sort: tools.sort
         tag: tools.tag
-      inputParameters:
-      - name: chainid
-        type: integer
-        description: Numeric chain ID (e.g. 1 for Ethereum mainnet, 56 for BNB Smart Chain, 8453 for Base).
-        required: true
-      - name: module
-        type: string
-        description: API module (account, contract, transaction, block, stats, gastracker, token).
-        required: true
-      - name: action
-        type: string
-        description: Action within the module (e.g. balance, txlist, tokenbalance, getabi).
-        required: true
-      - name: address
-        type: string
-        description: Ethereum address for account or token operations.
-      - name: contractaddress
-        type: string
-        description: Smart contract address for token or contract operations.
-      - name: startblock
-        type: integer
-        description: startblock
-      - name: endblock
-        type: integer
-        description: endblock
-      - name: page
-        type: integer
-        description: page
-      - name: offset
-        type: integer
-        description: offset
-      - name: sort
-        type: string
-        description: sort
-      - name: tag
-        type: string
-        description: Block tag (latest, earliest, pending) or block number.
       outputParameters:
       - type: object
         mapping: $.
-binds:
-- namespace: env
-  keys:
-    ETHERSCAN_TOKEN: ETHERSCAN_TOKEN
