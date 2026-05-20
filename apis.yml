@@ -13,62 +13,64 @@ created: '2025-02-17'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 tags:
-- Blockchain
-- Cryptocurrency
-- Ethereum
-- EVM
-- Web3
-apis:
-- aid: etherscan:etherscan
-  name: Etherscan API
-  description: Etherscan API V2 provides unified access to blockchain data across Ethereum and 60+ EVM-compatible chains,
-    including transactions, addresses, blocks, smart contracts, token transfers, and gas tracking. A single API key works
-    across all supported networks.
-  humanURL: https://docs.etherscan.io/
-  baseURL: https://api.etherscan.io/v2/api
-  tags:
   - Blockchain
   - Cryptocurrency
   - Ethereum
   - EVM
-  properties:
+  - Web3
+apis:
+  - aid: etherscan:etherscan
+    name: Etherscan API
+    description: Etherscan API V2 provides unified access to blockchain data across Ethereum and 60+ EVM-compatible chains,
+      including transactions, addresses, blocks, smart contracts, token transfers, and gas tracking. A single API key works
+      across all supported networks.
+    humanURL: https://docs.etherscan.io/
+    baseURL: https://api.etherscan.io/v2/api
+    tags:
+    - Blockchain
+    - Cryptocurrency
+    - Ethereum
+    - EVM
+    properties:
+    - url: https://docs.etherscan.io/
+      type: Documentation
+    - url: https://etherscan.io/apis
+      type: Pricing
+    - url: https://etherscan.io/myapikey
+      type: SignUp
+    - url: https://etherscan.io/apiterms
+      type: TermsOfService
+    - url: openapi/etherscan-openapi.yml
+      type: OpenAPI
+    - type: NaftikoCapability
+      url: capabilities/etherscan-accounts.yaml
+    - type: NaftikoCapability
+      url: capabilities/etherscan-blocks.yaml
+    - type: NaftikoCapability
+      url: capabilities/etherscan-contracts.yaml
+    - type: NaftikoCapability
+      url: capabilities/etherscan-gas-tracker.yaml
+    - type: NaftikoCapability
+      url: capabilities/etherscan-stats.yaml
+    - type: NaftikoCapability
+      url: capabilities/etherscan-tokens.yaml
+    - type: NaftikoCapability
+      url: capabilities/etherscan-transactions.yaml
+common:
+  - type: GitHubOrganization
+    url: https://github.com/etherscan
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/etherscan
+  - url: https://etherscan.io/
+    type: Portal
   - url: https://docs.etherscan.io/
     type: Documentation
   - url: https://etherscan.io/apis
     type: Pricing
-  - url: https://etherscan.io/myapikey
-    type: SignUp
   - url: https://etherscan.io/apiterms
     type: TermsOfService
-  - url: openapi/etherscan-openapi.yml
-    type: OpenAPI
-  - type: NaftikoCapability
-    url: capabilities/etherscan-accounts.yaml
-  - type: NaftikoCapability
-    url: capabilities/etherscan-blocks.yaml
-  - type: NaftikoCapability
-    url: capabilities/etherscan-contracts.yaml
-  - type: NaftikoCapability
-    url: capabilities/etherscan-gas-tracker.yaml
-  - type: NaftikoCapability
-    url: capabilities/etherscan-stats.yaml
-  - type: NaftikoCapability
-    url: capabilities/etherscan-tokens.yaml
-  - type: NaftikoCapability
-    url: capabilities/etherscan-transactions.yaml
-common:
-- type: LinkedIn
-  url: https://www.linkedin.com/company/etherscan
-- url: https://etherscan.io/
-  type: Portal
-- url: https://docs.etherscan.io/
-  type: Documentation
-- url: https://etherscan.io/apis
-  type: Pricing
-- url: https://etherscan.io/apiterms
-  type: TermsOfService
-- url: https://etherscan.io/myapikey
-  type: SignUp
+  - url: https://etherscan.io/myapikey
+    type: SignUp
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
