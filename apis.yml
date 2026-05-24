@@ -71,6 +71,8 @@ common:
     type: TermsOfService
   - url: https://etherscan.io/myapikey
     type: SignUp
+  - type: LLMsTxt
+    url: https://docs.etherscan.io/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
