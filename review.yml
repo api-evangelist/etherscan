@@ -1,370 +1,59 @@
-executed: '2025-03-03T02:16:22.961Z'
-results:
-  - code: apis-json-specification-aid-info
-    message: There is an aid.
-    path:
-      - aid
-    severity: 2
-    range:
-      start:
-        line: 0
-        character: 5
-      end:
-        line: 0
-        character: 14
-  - code: apis-json-url-info
-    message: There is a URL.
-    path:
-      - url
-    severity: 2
-    range:
-      start:
-        line: 1
-        character: 5
-      end:
-        line: 2
-        character: 85
-  - code: apis-json-apis-info
-    message: Has APIs
-    path:
-      - apis
-    severity: 2
-    range:
-      start:
-        line: 3
-        character: 5
-      end:
-        line: 22
-        character: 55
-  - code: apis-json-apis-baseURL-error
-    message: APIs MUST Have a Base URL
-    path:
-      - apis
-      - '0'
-    severity: 0
-    range:
-      start:
-        line: 4
-        character: 4
-      end:
-        line: 22
-        character: 55
-  - code: apis-json-apis-contact-error
-    message: API COULD have a contact.
-    path:
-      - apis
-      - '0'
-    severity: 1
-    range:
-      start:
-        line: 4
-        character: 4
-      end:
-        line: 22
-        character: 55
-  - code: apis-json-apis-aid-info
-    message: API has an aid property.
-    path:
-      - apis
-      - '0'
-      - aid
-    severity: 2
-    range:
-      start:
-        line: 4
-        character: 9
-      end:
-        line: 4
-        character: 28
-  - code: apis-json-apis-name-info
-    message: Has a Name
-    path:
-      - apis
-      - '0'
-      - name
-    severity: 2
-    range:
-      start:
-        line: 5
-        character: 10
-      end:
-        line: 5
-        character: 23
-  - code: apis-json-apis-tags-info
-    message: API Have a Tags Object
-    path:
-      - apis
-      - '0'
-      - tags
-    severity: 2
-    range:
-      start:
-        line: 6
-        character: 9
-      end:
-        line: 9
-        character: 22
-  - code: apis-json-apis-tags-upper-case-info
-    message: API Tags are Upper Case
-    path:
-      - apis
-      - '0'
-      - tags
-      - '0'
-    severity: 2
-    range:
-      start:
-        line: 7
-        character: 8
-      end:
-        line: 7
-        character: 18
-  - code: apis-json-apis-tags-upper-case-info
-    message: API Tags are Upper Case
-    path:
-      - apis
-      - '0'
-      - tags
-      - '1'
-    severity: 2
-    range:
-      start:
-        line: 8
-        character: 8
-      end:
-        line: 8
-        character: 16
-  - code: apis-json-apis-tags-upper-case-info
-    message: API Tags are Upper Case
-    path:
-      - apis
-      - '0'
-      - tags
-      - '2'
-    severity: 2
-    range:
-      start:
-        line: 9
-        character: 8
-      end:
-        line: 9
-        character: 22
-  - code: apis-json-apis-humanURL-info
-    message: Has a Human URL
-    path:
-      - apis
-      - '0'
-      - humanURL
-    severity: 2
-    range:
-      start:
-        line: 10
-        character: 14
-      end:
-        line: 10
-        character: 43
-  - code: apis-json-apis-properties-documentation-info
-    message: Has Documentation
-    path:
-      - apis
-      - '0'
-      - properties
-      - '0'
-      - type
-    severity: 2
-    range:
-      start:
-        line: 13
-        character: 14
-      end:
-        line: 13
-        character: 27
-  - code: apis-json-apis-description-info
-    message: Has a Description
-    path:
-      - apis
-      - '0'
-      - description
-    severity: 2
-    range:
-      start:
-        line: 14
-        character: 17
-      end:
-        line: 22
-        character: 55
-  - code: apis-json-name-info
-    message: There is a name.
-    path:
-      - name
-    severity: 2
-    range:
-      start:
-        line: 23
-        character: 6
-      end:
-        line: 23
-        character: 15
-  - code: apis-json-tags-info
-    message: There is a Tags Object
-    path:
-      - tags
-    severity: 2
-    range:
-      start:
-        line: 24
-        character: 5
-      end:
-        line: 27
-        character: 18
-  - code: apis-json-tags-upper-case-info
-    message: Tags Upper Case
-    path:
-      - tags
-      - '0'
-    severity: 2
-    range:
-      start:
-        line: 25
-        character: 4
-      end:
-        line: 25
-        character: 14
-  - code: apis-json-tags-upper-case-info
-    message: Tags Upper Case
-    path:
-      - tags
-      - '1'
-    severity: 2
-    range:
-      start:
-        line: 26
-        character: 4
-      end:
-        line: 26
-        character: 12
-  - code: apis-json-tags-upper-case-info
-    message: Tags Upper Case
-    path:
-      - tags
-      - '2'
-    severity: 2
-    range:
-      start:
-        line: 27
-        character: 4
-      end:
-        line: 27
-        character: 18
-  - code: apis-json-specification-type-info
-    message: There is a specification type.
-    path:
-      - type
-    severity: 2
-    range:
-      start:
-        line: 28
-        character: 6
-      end:
-        line: 28
-        character: 11
-  - code: apis-json-image-info
-    message: There is an image.
-    path:
-      - image
-    severity: 2
-    range:
-      start:
-        line: 29
-        character: 7
-      end:
-        line: 29
-        character: 80
-  - code: apis-json-created-info
-    message: There is a created date.
-    path:
-      - created
-    severity: 2
-    range:
-      start:
-        line: 31
-        character: 9
-      end:
-        line: 31
-        character: 21
-  - code: apis-json-modified-info
-    message: There is a modified date.
-    path:
-      - modified
-    severity: 2
-    range:
-      start:
-        line: 32
-        character: 10
-      end:
-        line: 32
-        character: 22
-  - code: apis-json-description-info
-    message: There is a description.
-    path:
-      - description
-    severity: 2
-    range:
-      start:
-        line: 34
-        character: 13
-      end:
-        line: 45
-        character: 13
-  - code: apis-json-maintainers-info
-    message: There is a maintainer object.
-    path:
-      - maintainers
-    severity: 2
-    range:
-      start:
-        line: 46
-        character: 12
-      end:
-        line: 48
-        character: 33
-  - code: apis-json-maintainers-fn-info
-    message: There is a FN property for maintainers.
-    path:
-      - maintainers
-      - '0'
-      - FN
-    severity: 2
-    range:
-      start:
-        line: 47
-        character: 8
-      end:
-        line: 47
-        character: 16
-  - code: apis-json-maintainers-email-info
-    message: There is a email property for maintainers.
-    path:
-      - maintainers
-      - '0'
-      - email
-    severity: 2
-    range:
-      start:
-        line: 48
-        character: 11
-      end:
-        line: 48
-        character: 33
-  - code: apis-json-specification-version-info
-    message: There is a specification version.
-    path:
-      - specificationVersion
-    severity: 2
-    range:
-      start:
-        line: 49
-        character: 22
-      end:
-        line: 49
-        character: 28
+aid: etherscan
+name: Etherscan
+review_type: AsyncAPI / WebSocket Availability
+reviewed: '2026-05-29'
+reviewer: API Evangelist
+sources:
+  - https://docs.etherscan.io/
+  - https://docs.etherscan.io/llms.txt
+  - https://etherscan.io/apis
+summary: >-
+  Etherscan's public developer surface is a unified V2 REST/HTTP API covering Ethereum
+  and 60+ EVM-compatible chains under a single API key. The complete documentation
+  index (llms.txt) was crawled and every documented endpoint is a request/response
+  HTTP API. No public WebSocket, streaming, server-sent events, pub/sub, or push
+  subscription endpoint is documented. The provider also does not publish a webhook
+  product in the V2 docs index at the time of review.
+protocols_documented:
+  - HTTPS REST (api.etherscan.io/v2/api with module/action query parameters)
+  - JSON-RPC style proxy endpoints (eth_blockNumber, eth_call, eth_getBlockByNumber,
+    eth_getTransactionByHash, eth_sendRawTransaction, etc.) exposed over the same
+    HTTPS REST surface
+  - Model Context Protocol (MCP) integration for AI agents (https://docs.etherscan.io/ai/mcp)
+websocket_available: false
+websocket_evidence:
+  - The full llms.txt documentation index lists no endpoint, page, or section
+    referencing WebSocket, ws://, wss://, streaming, subscriptions, push, pub/sub,
+    or server-sent events.
+  - The Etherscan API pricing/products page (https://etherscan.io/apis) advertises
+    REST API tiers only, with rate limits expressed as calls/second and credits/day,
+    consistent with a polled REST surface.
+  - The V2 migration guide and getting-started pages describe a single REST base URL
+    (https://api.etherscan.io/v2/api) and a chainid query parameter for multi-chain
+    access, with no alternate WebSocket base URL.
+webhooks_available: false
+webhooks_evidence:
+  - The llms.txt documentation index does not list any webhook configuration,
+    subscription, signing, or delivery endpoint as of 2026-05-29.
+  - No "Webhooks" section appears under api-reference, resources, or v2 sections of
+    the documentation tree.
+real_time_alternatives_noted:
+  - For real-time blockchain data, Etherscan users are expected to either (a) poll
+    the REST endpoints (eth_blockNumber, getlogs, txlist, gasoracle) or (b) connect
+    directly to an Ethereum node / third-party RPC provider that exposes the
+    standard Ethereum JSON-RPC eth_subscribe WebSocket method. Etherscan itself
+    does not publicly expose that WebSocket surface.
+asyncapi_action: not_created
+asyncapi_reason: >-
+  No documented public WebSocket, streaming, or event-driven endpoint exists to
+  describe. Creating an AsyncAPI specification would require fabricating channels,
+  bindings, and messages that the provider does not publish. Per the no-fabrication
+  rule, asyncapi/etherscan-asyncapi.yml was intentionally not created and
+  apis.yml was not modified.
+apis_yml_action: not_modified
+recommendation: >-
+  Re-check on each Etherscan changelog release (https://docs.etherscan.io/changelog)
+  for any future addition of WebSocket or webhook delivery. If/when Etherscan ships
+  a documented streaming or webhook surface, generate an AsyncAPI 3.0 specification
+  at asyncapi/etherscan-asyncapi.yml and add a corresponding properties entry of
+  type AsyncAPI to the apis.yml record.
