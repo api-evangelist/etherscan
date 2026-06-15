@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Etherscan API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apikey",
+      "value": "{{apikey}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Accounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Unified API endpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.etherscan.io/v2/api/",
+            "params": [
+              {
+                "name": "chainid",
+                "value": "",
+                "type": "query",
+                "description": "Numeric chain ID (e.g. 1 for Ethereum mainnet, 56 for BNB Smart Chain, 8453 for Base)."
+              },
+              {
+                "name": "module",
+                "value": "",
+                "type": "query",
+                "description": "API module (account, contract, transaction, block, stats, gastracker, token)."
+              },
+              {
+                "name": "action",
+                "value": "",
+                "type": "query",
+                "description": "Action within the module (e.g. balance, txlist, tokenbalance, getabi)."
+              },
+              {
+                "name": "address",
+                "value": "",
+                "type": "query",
+                "description": "Ethereum address for account or token operations."
+              },
+              {
+                "name": "contractaddress",
+                "value": "",
+                "type": "query",
+                "description": "Smart contract address for token or contract operations."
+              },
+              {
+                "name": "startblock",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endblock",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "tag",
+                "value": "",
+                "type": "query",
+                "description": "Block tag (latest, earliest, pending) or block number."
+              }
+            ]
+          },
+          "docs": "All Etherscan API V2 calls are issued against the same endpoint, with the `module`, `action`, and `chainid` query parameters selecting the operation and target chain."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
