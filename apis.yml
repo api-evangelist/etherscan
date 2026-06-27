@@ -39,7 +39,7 @@ apis:
       - url: https://etherscan.io/apis
         type: Pricing
       - url: https://etherscan.io/myapikey
-        type: SignUp
+        type: Signup
       - url: https://etherscan.io/apiterms
         type: TermsOfService
       - url: openapi/etherscan-openapi.yml
@@ -58,8 +58,8 @@ common:
   - url: https://etherscan.io/apiterms
     type: TermsOfService
   - url: https://etherscan.io/myapikey
-    type: SignUp
-  - type: LLMsTxt
+    type: Signup
+  - type: LlmsText
     url: https://docs.etherscan.io/llms.txt
 maintainers:
   - FN: Kin Lane
