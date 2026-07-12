@@ -45,6 +45,12 @@ apis:
       - url: openapi/etherscan-openapi.yml
         type: OpenAPI
 common:
+  - type: VulnerabilityDisclosure
+    url: security/etherscan-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/etherscan-domain-security.yml
+  - type: Authentication
+    url: authentication/etherscan-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/etherscan
   - type: LinkedIn
@@ -61,6 +67,8 @@ common:
     type: Signup
   - type: LlmsText
     url: https://docs.etherscan.io/llms.txt
+  - type: Blog
+    url: https://medium.com/feed/etherscan-blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
