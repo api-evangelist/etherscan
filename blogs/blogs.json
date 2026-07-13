@@ -1,0 +1,21 @@
+{
+  "repo": "etherscan",
+  "feeds": [
+    {
+      "source": "https://medium.com/feed/etherscan-blog",
+      "feed_url": "https://medium.com/feed/etherscan-blog",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://docs.etherscan.io/llms.txt",
+      "feed_url": "https://docs.etherscan.io/llms.txt",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 10
+}
