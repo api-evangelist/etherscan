@@ -45,6 +45,8 @@ apis:
       - url: openapi/etherscan-openapi.yml
         type: OpenAPI
 common:
+  - type: AgenticAccess
+    url: agentic-access/etherscan-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/etherscan-vulnerability-disclosure.yml
   - type: DomainSecurity
