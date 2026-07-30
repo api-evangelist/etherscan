@@ -6,7 +6,20 @@ description: >-
   smart contracts, token balances, and network activity. Etherscan's unified V2 API covers 60+ chains under a single
   account and API key, with a free tier offering 100,000 daily calls and paid tiers up to enterprise.
 url: https://raw.githubusercontent.com/api-evangelist/etherscan/refs/heads/main/apis.yml
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/etherscan.png
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -20,30 +33,132 @@ tags:
   - EVM
   - Web3
 apis:
-  - aid: etherscan:etherscan
-    name: Etherscan API
-    description: >-
-      Etherscan API V2 provides unified access to blockchain data across Ethereum and 60+ EVM-compatible chains,
-      including transactions, addresses, blocks, smart contracts, token transfers, and gas tracking. A single API key
-      works across all supported networks.
-    humanURL: https://docs.etherscan.io/
-    baseURL: https://api.etherscan.io/v2/api
-    tags:
-      - Blockchain
-      - Cryptocurrency
-      - Ethereum
-      - EVM
-    properties:
-      - url: https://docs.etherscan.io/
-        type: Documentation
-      - url: https://etherscan.io/apis
-        type: Pricing
-      - url: https://etherscan.io/myapikey
-        type: Signup
-      - url: https://etherscan.io/apiterms
-        type: TermsOfService
-      - url: openapi/etherscan-openapi.yml
-        type: OpenAPI
+- aid: etherscan:etherscan-accounts-api
+  name: Etherscan Accounts API
+  description: Address balances, transactions, and token holdings
+  humanURL: https://docs.etherscan.io/
+  baseURL: https://api.etherscan.io/v2/api
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/etherscan-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://docs.etherscan.io/
+  - type: Pricing
+    url: https://etherscan.io/apis
+  - type: Signup
+    url: https://etherscan.io/myapikey
+  - type: TermsOfService
+    url: https://etherscan.io/apiterms
+- aid: etherscan:etherscan-blocks-api
+  name: Etherscan Blocks API
+  description: Block details, rewards, and uncles
+  humanURL: https://docs.etherscan.io/
+  baseURL: https://api.etherscan.io/v2/api
+  tags:
+  - Blocks
+  properties:
+  - type: OpenAPI
+    url: openapi/etherscan-blocks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.etherscan.io/
+  - type: Pricing
+    url: https://etherscan.io/apis
+  - type: Signup
+    url: https://etherscan.io/myapikey
+  - type: TermsOfService
+    url: https://etherscan.io/apiterms
+- aid: etherscan:etherscan-contracts-api
+  name: Etherscan Contracts API
+  description: Smart contract source, ABI, and verification
+  humanURL: https://docs.etherscan.io/
+  baseURL: https://api.etherscan.io/v2/api
+  tags:
+  - Contracts
+  properties:
+  - type: OpenAPI
+    url: openapi/etherscan-contracts-api-openapi.yml
+  - type: Documentation
+    url: https://docs.etherscan.io/
+  - type: Pricing
+    url: https://etherscan.io/apis
+  - type: Signup
+    url: https://etherscan.io/myapikey
+  - type: TermsOfService
+    url: https://etherscan.io/apiterms
+- aid: etherscan:etherscan-gas-tracker-api
+  name: Etherscan Gas Tracker API
+  description: Network gas oracle and gas price estimates
+  humanURL: https://docs.etherscan.io/
+  baseURL: https://api.etherscan.io/v2/api
+  tags:
+  - Gas Tracker
+  properties:
+  - type: OpenAPI
+    url: openapi/etherscan-gas-tracker-api-openapi.yml
+  - type: Documentation
+    url: https://docs.etherscan.io/
+  - type: Pricing
+    url: https://etherscan.io/apis
+  - type: Signup
+    url: https://etherscan.io/myapikey
+  - type: TermsOfService
+    url: https://etherscan.io/apiterms
+- aid: etherscan:etherscan-stats-api
+  name: Etherscan Stats API
+  description: Network and supply statistics
+  humanURL: https://docs.etherscan.io/
+  baseURL: https://api.etherscan.io/v2/api
+  tags:
+  - Stats
+  properties:
+  - type: OpenAPI
+    url: openapi/etherscan-stats-api-openapi.yml
+  - type: Documentation
+    url: https://docs.etherscan.io/
+  - type: Pricing
+    url: https://etherscan.io/apis
+  - type: Signup
+    url: https://etherscan.io/myapikey
+  - type: TermsOfService
+    url: https://etherscan.io/apiterms
+- aid: etherscan:etherscan-tokens-api
+  name: Etherscan Tokens API
+  description: ERC-20, ERC-721, and ERC-1155 token data
+  humanURL: https://docs.etherscan.io/
+  baseURL: https://api.etherscan.io/v2/api
+  tags:
+  - Tokens
+  properties:
+  - type: OpenAPI
+    url: openapi/etherscan-tokens-api-openapi.yml
+  - type: Documentation
+    url: https://docs.etherscan.io/
+  - type: Pricing
+    url: https://etherscan.io/apis
+  - type: Signup
+    url: https://etherscan.io/myapikey
+  - type: TermsOfService
+    url: https://etherscan.io/apiterms
+- aid: etherscan:etherscan-transactions-api
+  name: Etherscan Transactions API
+  description: Transaction status and receipts
+  humanURL: https://docs.etherscan.io/
+  baseURL: https://api.etherscan.io/v2/api
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/etherscan-transactions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.etherscan.io/
+  - type: Pricing
+    url: https://etherscan.io/apis
+  - type: Signup
+    url: https://etherscan.io/myapikey
+  - type: TermsOfService
+    url: https://etherscan.io/apiterms
 common:
   - type: AgenticAccess
     url: agentic-access/etherscan-agentic-access.yml
