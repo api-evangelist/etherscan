@@ -1,0 +1,153 @@
+openapi: 3.0.3
+info:
+  title: Etherscan API
+  description: >-
+    Etherscan API V2 provides unified access to blockchain data across Ethereum
+    and 60+ EVM-compatible chains, including transactions, addresses, blocks,
+    smart contracts, token transfers, and gas tracking. A single API key works
+    across all supported networks.
+  version: "2.0"
+  contact:
+    name: Etherscan Support
+    url: https://docs.etherscan.io/
+  termsOfService: https://etherscan.io/apiterms
+  license:
+    name: Etherscan API Terms
+    url: https://etherscan.io/apiterms
+servers:
+  - url: https://api.etherscan.io/v2/api
+    description: Etherscan unified V2 API endpoint
+security:
+  - apiKeyAuth: []
+tags:
+  - name: Accounts
+    description: Address balances, transactions, and token holdings
+  - name: Contracts
+    description: Smart contract source, ABI, and verification
+  - name: Transactions
+    description: Transaction status and receipts
+  - name: Blocks
+    description: Block details, rewards, and uncles
+  - name: Tokens
+    description: ERC-20, ERC-721, and ERC-1155 token data
+  - name: Gas Tracker
+    description: Network gas oracle and gas price estimates
+  - name: Stats
+    description: Network and supply statistics
+paths:
+  /:
+    get:
+      summary: Unified API endpoint
+      description: >-
+        All Etherscan API V2 calls are issued against the same endpoint, with
+        the `module`, `action`, and `chainid` query parameters selecting the
+        operation and target chain.
+      operationId: callApi
+      tags:
+        - Accounts
+        - Contracts
+        - Transactions
+        - Blocks
+        - Tokens
+        - Gas Tracker
+        - Stats
+      parameters:
+        - name: chainid
+          in: query
+          required: true
+          description: Numeric chain ID (e.g. 1 for Ethereum mainnet, 56 for BNB Smart Chain, 8453 for Base).
+          schema:
+            type: integer
+            example: 1
+        - name: module
+          in: query
+          required: true
+          description: API module (account, contract, transaction, block, stats, gastracker, token).
+          schema:
+            type: string
+            example: account
+        - name: action
+          in: query
+          required: true
+          description: Action within the module (e.g. balance, txlist, tokenbalance, getabi).
+          schema:
+            type: string
+            example: balance
+        - name: address
+          in: query
+          required: false
+          description: Ethereum address for account or token operations.
+          schema:
+            type: string
+            example: "0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae"
+        - name: contractaddress
+          in: query
+          required: false
+          description: Smart contract address for token or contract operations.
+          schema:
+            type: string
+        - name: startblock
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: endblock
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: offset
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [asc, desc]
+        - name: tag
+          in: query
+          required: false
+          description: Block tag (latest, earliest, pending) or block number.
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful response with module-specific result payload.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponse"
+        "400":
+          description: Invalid request parameters.
+        "401":
+          description: Missing or invalid API key.
+        "429":
+          description: Rate limit exceeded.
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: query
+      name: apikey
+      description: Etherscan API key, obtained from https://etherscan.io/myapikey
+  schemas:
+    ApiResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: "1 for success, 0 for error"
+          example: "1"
+        message:
+          type: string
+          example: OK
+        result:
+          description: Module-specific response payload (string, object, or array).

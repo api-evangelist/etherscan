@@ -1,0 +1,26 @@
+{
+  "provider": "etherscan",
+  "sources": [
+    "etherscan-accounts-api-openapi.yml",
+    "etherscan-blocks-api-openapi.yml",
+    "etherscan-contracts-api-openapi.yml",
+    "etherscan-gas-tracker-api-openapi.yml",
+    "etherscan-stats-api-openapi.yml",
+    "etherscan-tokens-api-openapi.yml",
+    "etherscan-transactions-api-openapi.yml"
+  ],
+  "outputs": [
+    "etherscan-accounts-api-openapi.yml",
+    "etherscan-blocks-api-openapi.yml",
+    "etherscan-contracts-api-openapi.yml",
+    "etherscan-gas-tracker-api-openapi.yml",
+    "etherscan-stats-api-openapi.yml",
+    "etherscan-tokens-api-openapi.yml",
+    "etherscan-transactions-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
