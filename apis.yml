@@ -67,6 +67,8 @@ apis:
   - type: TermsOfService
     url: https://etherscan.io/apiterms
 common:
+  - type: Website
+    url: https://www.etherscan.io/
   - type: AgenticAccess
     url: agentic-access/etherscan-agentic-access.yml
   - type: VulnerabilityDisclosure
