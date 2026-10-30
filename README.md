@@ -1,4 +1,4 @@
-# Etherscan (etherscan)
+# Etherscan
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,65 +66,133 @@
 
 Etherscan is the leading blockchain explorer, search, API, and analytics platform for Ethereum and other EVM-compatible chains. It allows users to easily access and explore blockchain data, including transaction histories, smart contracts, token balances, and network activity. Etherscan's unified V2 API covers 60+ chains under a single account and API key, with a free tier offering 100,000 daily calls and paid tiers up to enterprise.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/etherscan/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/etherscan/refs/heads/main/apis.yml)
+**Areas:** Blockchain · Cryptocurrency · Ethereum · EVM · Web3
 
-## Scope
+## Etherscan on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Etherscan is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/etherscan/](https://apis.io/providers/etherscan/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Blockchain
-- Cryptocurrency
-- Ethereum
-- EVM
-- Web3
+- [Etherscan Accounts API](https://apis.io/apis/etherscan/etherscan-accounts-api/) — Address balances, transactions, and token holdings
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-17
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Etherscan API
+Model Context Protocol servers that expose the API to agents.
 
-Etherscan API V2 provides unified access to blockchain data across Ethereum and 60+ EVM-compatible chains, including transactions, addresses, blocks, smart contracts, token transfers, and gas tracking. A single API key works across all supported networks.
+- [etherscan](https://apis.io/servers/etherscan/etherscan/)
 
-- **Human URL:** [https://docs.etherscan.io/](https://docs.etherscan.io/)
-- **Base URL:** `https://api.etherscan.io/v2/api`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Blockchain
-- Cryptocurrency
-- Ethereum
-- EVM
+- [Etherscan Agentic Access](https://apis.io/agentic-access/etherscan/etherscan-agentic-access/)
 
-#### Properties
+#### Collections (8)
 
+Postman and Open Collection request collections.
+
+- [Etherscan API](https://apis.io/collections/etherscan/open-etherscan/)
+- [Etherscan Accounts API](https://apis.io/collections/etherscan/open-etherscan-accounts-api/)
+- [Etherscan Accounts Blocks API](https://apis.io/collections/etherscan/open-etherscan-blocks-api/)
+- [Etherscan Accounts Contracts API](https://apis.io/collections/etherscan/open-etherscan-contracts-api/)
+- [Etherscan Accounts Gas Tracker API](https://apis.io/collections/etherscan/open-etherscan-gas-tracker-api/)
+- [Etherscan Accounts Stats API](https://apis.io/collections/etherscan/open-etherscan-stats-api/)
+- [Etherscan Accounts Tokens API](https://apis.io/collections/etherscan/open-etherscan-tokens-api/)
+- [Etherscan Accounts Transactions API](https://apis.io/collections/etherscan/open-etherscan-transactions-api/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Etherscan Authentication](https://apis.io/security/etherscan/etherscan-authentication/)
+- [Etherscan Domain Security](https://apis.io/security/etherscan/etherscan-domain-security/)
+- [Etherscan Vulnerability Disclosure](https://apis.io/security/etherscan/etherscan-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Etherscan Plans Pricing](https://apis.io/plans/etherscan/etherscan-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Etherscan Rate Limits](https://apis.io/rate-limits/etherscan/etherscan-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Etherscan Finops](https://apis.io/finops/etherscan/etherscan-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.etherscan.io/)
 - [Documentation](https://docs.etherscan.io/)
 - [Pricing](https://etherscan.io/apis)
-- [Sign Up](https://etherscan.io/myapikey)
-- [Terms of Service](https://etherscan.io/apiterms)
-- [OpenAPI](openapi/etherscan-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/etherscan.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/etherscan.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Blog](https://medium.com/feed/etherscan-blog)
+- [Terms of service](https://etherscan.io/apiterms)
+- [GitHub](https://github.com/etherscan)
 
-## Common Properties
+## API Evangelist rating
 
-- [GitHub Organization](https://github.com/etherscan)
-- [LinkedIn](https://www.linkedin.com/company/etherscan)
-- [Portal](https://etherscan.io/)
-- [Documentation](https://docs.etherscan.io/)
-- [Pricing](https://etherscan.io/apis)
-- [Terms of Service](https://etherscan.io/apiterms)
-- [Sign Up](https://etherscan.io/myapikey)
-- [L L Ms Txt](https://docs.etherscan.io/llms.txt)
+**Kin Score 36.5** — thin · rubric 0.25.0 · scored 2026-10-23
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 48.4 |
+| Contract governance | 0.0 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 42.1 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 30.7** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 21.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/etherscan/](https://apis.io/providers/etherscan/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Etherscan: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/etherscan/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
